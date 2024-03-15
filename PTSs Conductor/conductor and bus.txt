@@ -1,0 +1,91 @@
+
+ {
+    _id: ObjectId("6544f723dffb0d273bd4d2d8"),
+    FirstName: 'Bimal',
+    LastName: 'Bera',
+    Phone: '9574497299',
+    Username: 'bimal',
+    Email: 'bimalbera@gmail.com',
+    Password: 'bimal@123'
+  },
+  {
+    _id: ObjectId("6544f7a5dffb0d273bd4d323"),
+    FirstName: 'Jay',
+    LastName: 'Jasani',
+    Phone: '9316590330',
+    Username: 'jay',
+    Email: 'jayjasani0330@gmail.com',
+    Password: 'jay@123'
+  },
+  {
+    _id: ObjectId("6544f837dffb0d273bd4d36f"),
+    FirstName: 'Dharmik',
+    LastName: 'Zadafiya',
+    Phone: '9773101139',
+    Username: 'dharmik',
+    Email: 'dharmik78@gmail.com',
+    Password: 'dharmik@123'
+  },
+  {
+    _id: ObjectId("6544f841dffb0d273bd4d378"),
+    FirstName: 'Ansh',
+    LastName: 'Zadafiya',
+    Phone: '7046929427',
+    Username: 'ansh',
+    Email: 'ansh234@gmail.com',
+    Password: 'ansh@123'
+  }
+
+
+
+
+{
+    _id: ObjectId("6544f96bdffb0d273bd4d428"),
+    BusName: 'Jay Khodiyar',
+    BusNumber: 'BUS123',
+    BusType: 'AC/Seeter',
+    Image: 'jaykhodiyar/bus-1.jpeg',
+    Ratting: 4,
+    Capacity: 32,
+    "ConductorId" : "6544f837dffb0d273bd4d36f"
+  },
+  {
+    _id: ObjectId("6544f981dffb0d273bd4d434"),
+    BusName: 'Jay Yogeswar',
+    BusNumber: 'BUS456',
+    BusType: 'Seeter',
+    Image: 'jayumiya/bus1.jpeg',
+    Ratting: 4,
+    Capacity: 32,
+    "ConductorId" : "6544f841dffb0d273bd4d378"
+  },
+  {
+    _id: ObjectId("6544f991dffb0d273bd4d440"),
+    BusName: 'Krishn',
+    BusNumber: 'BUS789',
+    BusType: 'AC/Seeter',
+    Image: 'krishn/bus-1.jpeg',
+    Ratting: 4,
+    Capacity: 32,
+    "ConductorId" : "6544f7a5dffb0d273bd4d323"
+  },
+  {
+    _id: ObjectId("6544f9a1dffb0d273bd4d44d"),
+    BusName: 'Hanumant',
+    BusNumber: 'BUS000',
+    BusType: 'Seeter',
+    Image: 'hanumant/bus-1.jpeg',
+    Ratting: 4,
+    Capacity: 32,
+    "ConductorId" : "6544f7a5dffb0d273bd4d323"
+  },
+  {
+    _id: ObjectId("6544f9afdffb0d273bd4d458"),
+    BusName: 'Gujrat',
+    BusNumber: 'BUS999',
+    BusType: 'AC/Seeter',
+    Image: 'gujrat/bus-1.jpeg',
+    Ratting: 4,
+    Capacity: 32,
+    "ConductorId" : "6544f723dffb0d273bd4d2d8"
+  }

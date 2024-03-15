@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Single Listing</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Travelix Project">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+    <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="plugins/colorbox/colorbox.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
+    <link rel="stylesheet" type="text/css" href="styles/single_listing_styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/single_listing_responsive.css">
+</head>
+
+<body>
+    <!-- Modal -->
+    <div class="modal fade" id="reviewModal" tabindex="-1" role="dialog" aria-labelledby="reviewModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-light bg-dark">
+                    <h5 class="modal-title" id="reviewModalLabel"> R E V I E W S</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="text-light">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary form-control" data-dismiss="modal">G O &ensp;&ensp; B
+                        A C K</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="super_container">
+        <!-- Header -->
+		<header class="header">
+			<!-- Top Bar -->
+			<div class="top_bar">
+				<div class="container">
+					<div class="row">
+						<div class="col d-flex flex-row">
+							<div class="phone">+91 9427822506</div>
+							<div class="social">
+								<ul class="social_list">
+									<li class="social_list_item"><a href="#"><i class="fa fa-pinterest"
+												aria-hidden="true"></i></a></li>
+									<li class="social_list_item"><a href="#"><i class="fa fa-facebook"
+												aria-hidden="true"></i></a></li>
+									<li class="social_list_item"><a href="#"><i class="fa fa-twitter"
+												aria-hidden="true"></i></a></li>
+									<li class="social_list_item"><a href="#"><i class="fa fa-dribbble"
+												aria-hidden="true"></i></a></li>
+									<li class="social_list_item"><a href="#"><i class="fa fa-behance"
+												aria-hidden="true"></i></a></li>
+									<li class="social_list_item"><a href="#"><i class="fa fa-linkedin"
+												aria-hidden="true"></i></a></li>
+								</ul>
+							</div>
+							<div class="user_box ml-auto">
+								<% if (username !="" ) { %>
+									<div class="user_box_login user_box_link"><a href="/logout">Logout</a></div>
+									<div class="user_box_register user_box_link"><a href="exp/profile" data-toggle="modal"
+											data-target="#profileModal">
+											<%= username %>
+										</a></div>
+									<% } else { %>
+										<div class="user_box_login user_box_link"><a href="#" data-toggle="modal"
+												data-target="#userloginModal">login</a></div>
+										<div class="user_box_register user_box_link"><a href="#" data-toggle="modal"
+												data-target="#registerModal">register</a></div>
+									<% } %>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Main Navigation -->
+			<nav class="main_nav">
+				<div class="container">
+					<div class="row">
+						<div class="col main_nav_col d-flex flex-row align-items-center justify-content-start">
+							<div class="logo_container">
+								<div class="logo"><a href="#" style="font-weight: bold;"><span style="color: white;">
+											PT</span><span style="color: red;">S<span
+												style="color: red; text-transform: lowercase;">'s</span></span></div>
+							</div>
+							<div class="main_nav_container ml-auto">
+								<ul class="main_nav_list">
+									<li class="main_nav_item"><a href="/">home</a></li>
+									<li class="main_nav_item"><a href="about">about us</a></li>
+									<li class="main_nav_item"><a href="offers">offers</a></li>
+									<li class="main_nav_item"><a href="blog">news</a></li>
+									<li class="main_nav_item"><a href="contact">contact</a></li>
+								</ul>
+							</div>
+							<div class="content_search ml-lg-0 ml-auto"></div>
+							<div class="hamburger">
+								<i class="fa fa-bars trans_200"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<!-- toggle button  -->
+		<div class="menu trans_500">
+			<div class="menu_content d-flex flex-column align-items-center justify-content-center text-center">
+				<div class="menu_close_container">
+					<div class="menu_close"></div>
+				</div>
+				<div class="logo menu_logo"><a href="#" style="font-weight: bold;"><span style="color: white;">
+							PT</span><span style="color: black;">S<span
+								style="text-transform: lowercase;">'s</span></span></div>
+				<ul>
+					<li class="menu_item"><a href="/">home</a></li>
+					<li class="menu_item"><a href="about">about us</a></li>
+					<li class="menu_item"><a href="offers">offers</a></li>
+					<li class="menu_item"><a href="blog">news</a></li>
+					<li class="menu_item"><a href="contact">contact</a></li> <br>
+					<% if (username =="" ) { %>
+						<li class="menu_item"><a href="" href="#" data-toggle="modal" data-target="#userloginModal"><span
+							style="color: black; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+							login </span></a></li>
+				<li class="menu_item"><a href="" href="#" data-toggle="modal" data-target="#registerModal"><span
+							style="color: black; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+							register </span></a></li>
+					<% } else { %>
+						<li class="menu_item"><a href="/logout"><span
+							style="color: black; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+							Logout </span></a></li>
+						<li class="menu_item"><a href="exp/profile" data-toggle="modal" data-target="#profileModal"><span
+							style="color: black; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+							<%= username %> </span></a></li>
+					<% } %>
+					
+				</ul>
+			</div>
+		</div>
+            <div class="listing py-5 mt-5" style="color: black;">
+                <!-- style="margin: 150px 0px 50px 0px;" -->
+                <div class="container py-5 text-center table-center">
+                    <form action="/booknow" method="post">
+                        <input type="text" value="<%= busId %>" name="busId" hidden>
+                        <input type="text" value="<%= timeId %>" name="timeId" hidden>
+                        <input type="text" value="0" name="amount" id="amount" hidden>
+                        <input type="text" value="<%= time.Price; %>" id="price" hidden> 
+                        <table style="border: 5px solid black;">
+                            <tr>
+                                <th colspan="3">
+                                    <table width="100%" class="my-2" style="margin-left: 5%; border: 2px; ">
+                                        <tr>
+                                            <th><div class="suggestion-box" style="background: black;"></div></th>
+                                            <td>Available Seats</td>
+                                        </tr>
+                                        <tr>
+                                            <th><div class="suggestion-box" style="background: red;"></div></th>
+                                            <td>Booked Seats</td>
+                                        </tr>
+                                        <tr>
+                                            <th><div class="suggestion-box" style="background: rgb(81, 240, 81);"></div></th>
+                                            <td>Your Selected Seats</td>
+                                        </tr>
+                                        <tr>
+                                            <th><div class="suggestion-box" style="background: blue;"></div></th>
+                                            <td>Your Booked Seats</td>
+                                        </tr>
+                                        <tr>
+                                            <th><div class="suggestion-box" style="background: pink;"></div></th>
+                                            <td>Handicap & Conductor</td>
+                                        </tr>
+                                    </table>
+                                </th>
+                                <th colspan="3">
+                                    <table width="100%" class="my-2" style="margin-left: 5%; border: 2px; ">
+                                        <tr>
+                                            <th><span id="selectedseet"> Seats :  </span> </th>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                
+                                            </th>
+                                        </tr>
+                                    </table>
+                                </th>
+                            </tr>
+                            <tr><th colspan="6"><hr color="black"></th></tr>
+                            <% $no=1; $result=false; $mySeat = false; %>
+                                <% for($i=1; $i<=9; $i++) { %>
+                                    <tr>
+                                        <% for($j=1; $j <=6; $j++) { 
+                                            if(($j==3 || $j==4) && $i <= 8) { %>
+                                            <th></th>
+                                            <% } else if($i==5 && $j < 3) { %>
+                                                <th></th>
+                                            <% } else if($i == 6 && $j == 1) { %>
+                                                <th style="border: 0.5px solid black;">
+                                                    <button disabled="true" class="btn">
+                                                    <img src="../images/seetPink.png" width="30px"
+                                                        style="object-fit: cover;" alt="Booked">
+                                                    </button>
+                                                    
+                                                </th>
+                                            <% } else if($i == 6 && $j == 2) { %>
+                                                    <th></th>
+                                            <% } else { %>
+                                                    <th style="border: 0.5px solid black;">
+                                                        <% allSeatNumbers.forEach(seetbooked=> {
+                                                            if(seetbooked == $no) { $result = true }
+                                                        }) %>
+                                                        <% yourseat.forEach(seetbooked=> {
+                                                            if(seetbooked == $no) { $mySeat = true }
+                                                        }) %>
+                                                        <% if($mySeat) { %>
+                                                            <button disabled="true" class="btn">
+                                                                <img src="../images/seatBlue.png" width="30px"
+                                                                    style="object-fit: cover;" alt="Booked">
+                                                            </button>
+                                                        <% $mySeat = false; $result=false
+                                                        } else if($result) { %>
+                                                            <button disabled="true" class="btn">
+                                                                <img src="../images/seatRed.png" width="30px"
+                                                                    style="object-fit: cover;" alt="Booked">
+                                                            </button>
+                                                        <% $result=false
+                                                        } 
+                                                        else if($i == 4 && $j >= 4) { %>
+                                                            <button disabled="true" class="btn">
+                                                                <img src="../images/seetPink.png" width="30px"
+                                                                    style="object-fit: cover;" alt="Booked">
+                                                                </button>
+                                                            <% } else { %>
+                                                                    <div class="form-check">
+                                                                        <input type="checkbox" class="form-check-input"
+                                                                            id="seat<%= $no %>" style="display: none;"
+                                                                            onclick="seetcolor<%= $no %>()" name="seatNo"
+                                                                            value="<%= $no %>">
+                                                                        <label class="form-check-label btn"
+                                                                            for="seat<%= $no %>">
+                                                                            <img id="seatImage<%= $no %>"
+                                                                                src="../images/seatBlack.png"
+                                                                                width="30px" style="object-fit: cover;"
+                                                                                alt="Available">
+                                                                        </label>
+                                                                    </div>
+                                                                    
+                                                                    <script>
+                                                                        function seetcolor<%= $no %>(){
+                                                                            // Get the checkbox and label elements
+                                                                            var checkbox = document.getElementById("seat<%= $no %>");
+                                                                            var label = document.getElementById("seatImage<%= $no %>");
+                                                                            var selectSeet = document.getElementById("selectedseet");
+                                                                            var amount = document.getElementById("amount");
+                                                                            var price = document.getElementById("price");
+                                                                            // Check if the checkbox is checked
+                                                                            if (checkbox.checked) {
+                                                                                // Change the image source and display the label when the checkbox is checked
+                                                                                label.src = "../images/seatGreen.png"; // Change this to the path of your selected image
+                                                                                selectSeet.innerHTML += checkbox.value+", ";
+                                                                                amount.value = parseInt(amount.value) + parseInt(price.value);
+                                                                            } else {
+                                                                                // Change the image source and hide the label when the checkbox is unchecked
+                                                                                label.src = "../images/seatBlack.png";
+                                                                                label.alt = "Available";
+                                                                                const seetbookedtext = checkbox.value+",";
+                                                                                selectSeet.innerText = selectSeet.innerText.replace(seetbookedtext , "");
+                                                                                amount.value = parseInt(amount.value) - parseInt(price.value);
+                                                                            }
+                                                                        }
+                                                                    </script>
+                                                            <% } %>
+                                                        <label for="seat<%= $no %>" style="width: 50%; border-radius: 10px; color: white; background: black; font-size: 10px;"> <%= $no; %> </label>
+                                                        <% $no=$no + 1;%> 
+                                                    </th>
+                                            <% } %>
+                                        <% } %>
+                                    </tr>
+                                <% } %>
+                                    <tr>
+                                        <th colspan="3">
+                                            <input type="submit" class="btn btn-primary my-2 form-control"
+                                                value="Book Now">
+                                        </th>
+                                        <th></th>
+                                        <th colspan="2">
+                                            <a href="/cancel?busId=<%= busId %>&timeId=<%= timeId %>" class="btn btn-danger form-control"> Cancle </a>
+                                            
+                                        </th>
+                                    </tr>
+                                    
+                        </table>
+                    </form>
+                </div>
+            </div>
+            <%- include('./footer.ejs') %>
+            <%- include('modal') %>
+            <%- include('./script.ejs') %>
+</body>
+
+</html>

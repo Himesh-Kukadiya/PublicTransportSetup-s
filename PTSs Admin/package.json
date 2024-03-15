@@ -1,0 +1,23 @@
+{
+  "name": "ptss-admin",
+  "version": "1.0.0",
+  "description": "this is admin panel",
+  "main": "app.js",
+  "scripts": {
+    "test": "admin"
+  },
+  "keywords": [
+    "patelsir"
+  ],
+  "author": "himesh",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mongoose": "^8.0.3",
+    "nodemailer": "^6.9.7",
+    "nodemon": "^3.0.2"
+  }
+}

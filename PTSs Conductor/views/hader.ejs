@@ -1,0 +1,94 @@
+<!-- Header -->
+<header class="header">
+    <!-- Top Bar -->
+    <div class="top_bar">
+        <div class="container">
+            <div class="row">
+                <div class="col d-flex flex-row">
+                    <div class="phone">+91 9427822506</div>
+                    <div class="social">
+                        <ul class="social_list">
+                            <li class="social_list_item"><a href="#"><i class="fa fa-pinterest"
+                                        aria-hidden="true"></i></a></li>
+                            <li class="social_list_item"><a href="#"><i class="fa fa-facebook"
+                                        aria-hidden="true"></i></a></li>
+                            <li class="social_list_item"><a href="#"><i class="fa fa-twitter"
+                                        aria-hidden="true"></i></a></li>
+                            <li class="social_list_item"><a href="#"><i class="fa fa-dribbble"
+                                        aria-hidden="true"></i></a></li>
+                            <li class="social_list_item"><a href="#"><i class="fa fa-behance"
+                                        aria-hidden="true"></i></a></li>
+                            <li class="social_list_item"><a href="#"><i class="fa fa-linkedin"
+                                        aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="user_box ml-auto">
+                        <% if (username !="" ) { %>
+                            <div class="user_box_login user_box_link"><a href="/logout">Logout</a></div>
+                            <div class="user_box_register user_box_link"><a href="exp/profile" data-toggle="modal"
+                                    data-target="#profileModal">
+                                    <%= username %>
+                                </a></div>
+                            <% } else { %>
+                                <div class="user_box_login user_box_link"><a href="#" data-toggle="modal"
+                                        data-target="#userloginModal">login</a></div>
+                                <div class="user_box_register user_box_link"><a href="#" data-toggle="modal"
+                                        data-target="#registerModal">register</a></div>
+                            <% } %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Main Navigation -->
+    <nav class="main_nav">
+        <div class="container">
+            <div class="row">
+                <div class="col main_nav_col d-flex flex-row align-items-center justify-content-start">
+                    <div class="logo_container">
+                        <div class="logo"><a href="#" style="font-weight: bold;"><span style="color: white;">
+                                    PT</span><span style="color: red;">S<span
+                                        style="color: red; text-transform: lowercase;">'s</span></span></div>
+                    </div>
+                    <div class="main_nav_container ml-auto">
+                        <ul class="main_nav_list">
+                            <li class="main_nav_item"><a href="/">home</a></li>
+                            <li class="main_nav_item"><a href="about">about us</a></li>
+                            <li class="main_nav_item"><a href="offers">offers</a></li>
+                            <li class="main_nav_item"><a href="blog">news</a></li>
+                            <li class="main_nav_item"><a href="contact">contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="content_search ml-lg-0 ml-auto"></div>
+                    <div class="hamburger">
+                        <i class="fa fa-bars trans_200"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- toggle button  -->
+<div class="menu trans_500">
+    <div class="menu_content d-flex flex-column align-items-center justify-content-center text-center">
+        <div class="menu_close_container">
+            <div class="menu_close"></div>
+        </div>
+        <div class="logo menu_logo"><a href="#" style="font-weight: bold;"><span style="color: white;">
+                    PT</span><span style="color: black;">S<span
+                        style="text-transform: lowercase;">'s</span></span></div>
+        <ul>
+            <li class="menu_item"><a href="/">home</a></li>
+            <li class="menu_item"><a href="about">about us</a></li>
+            <li class="menu_item"><a href="offers">offers</a></li>
+            <li class="menu_item"><a href="blog">news</a></li>
+            <li class="menu_item"><a href="contact">contact</a></li> <br>
+            <li class="menu_item"><a href="" href="#" data-toggle="modal" data-target="#userloginModal"><span
+                        style="color: black; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+                        login </span></a></li>
+            <li class="menu_item"><a href="" href="#" data-toggle="modal" data-target="#registerModal"><span
+                        style="color: black; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+                        register </span></a></li>
+        </ul>
+    </div>
+</div>

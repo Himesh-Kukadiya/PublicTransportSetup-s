@@ -1,0 +1,152 @@
+<div class="search">
+    <!-- Search Contents -->
+    <div class="container fill_height">
+        <div class="row fill_height">
+            <div class="col fill_height">
+                <!-- Search Tabs -->
+                <div class="search_tabs_container">
+                    <div
+                        class="search_tabs d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+                        <div
+                            class="search_tab active d-flex flex-row align-items-center justify-content-lg-center justify-content-start">
+                            <img src="images/bus.png" alt="">Buses</span></div>
+                        <div
+                            class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start">
+                            <img src="../images/train.png" alt="">Trains</div>
+                        <div
+                            class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start">
+                            <img src="images/hotel.png" alt=""><span>hotels</div>
+                        <div
+                            class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start">
+                            <img src="images/departure.png" alt="">flights</div>
+                        <!-- <div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="images/cruise.png" alt="">cruises</div>
+                        <div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="images/diving.png" alt="">activities</div> -->
+                    </div>
+                </div>
+                <!-- Search Panel BUS -->
+                <div class="search_panel active">
+                    <form action="findbus" method="post" id="search_form_1"
+                        class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+                        <div class="search_item">
+                            <div>From</div>
+                            <input type="text" name="from" class="destination search_input" required="required">
+                        </div>
+                        <div class="search_item">
+                            <div>To</div>
+                            <input type="text" name="to"  class="destination search_input" required="required">
+                        </div>
+                        <div class="search_item">
+                            <div>check in</div>
+                            <input type="date" name="date" class="check_in search_input" placeholder="YYYY-MM-DD">
+                        </div>
+                        <!-- <div class="search_item">
+                            <div>Person</div>
+                            <select name="person" id="adults_1" class="dropdown_item_select search_input">
+                                <% for($i=1; $i <=10; $i++) { %>
+                                    <option>
+                                        <%= $i %>
+                                    </option>
+                                    <% } %>
+                            </select>
+                        </div> -->
+                        <input type="submit" value="Search" class="button search_button">
+                    </form>
+                </div>
+
+                <!-- Search Panel TRAIN --> 
+                <div class="search_panel">
+                    <form action="findtrain" method="post" id="search_form_2"
+                        class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+                        <div class="search_item">
+                            <div>From</div>
+                            <input type="text" name="from" class="destination search_input" required="required">
+                        </div>
+                        <div class="search_item">
+                            <div>To</div>
+                            <input type="text" name="to"   class="destination search_input" required="required">
+                        </div>
+                        <div class="search_item">
+                            <div>check in</div>
+                            <input type="date" name="date" class="check_in search_input" placeholder="YYYY-MM-DD">
+                        </div>
+                        <!-- <div class="search_item">
+                            <div>Person</div>
+                            <select name="person" id="adults_2" class="dropdown_item_select search_input">
+                                <% for($i=1; $i <=10; $i++) { %>
+                                    <option>
+                                        <%= $i %>
+                                    </option>
+                                    <% } %>
+                            </select>
+                        </div> -->
+                        <input type="submit" value="Search" class="button search_button">
+                    </form>
+                </div>
+
+                <!-- Search Panel HOTEL -->
+                <div class="search_panel">
+                    <form action="findhotel" method="post" id="search_form_3"
+                        class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+                        <div class="search_item">
+                            <div>City</div>
+                            <input type="text" name="city" class="destination search_input" required="required">
+                        </div>
+                        <div class="search_item">
+                            <div>Location</div>
+                            <input type="text" name="location" class="destination search_input" required="required">
+                        </div>
+                        <div class="search_item">
+                            <div>check in</div>
+                            <input type="date" name="indate" class="check_in search_input" placeholder="YYYY-MM-DD">
+                        </div>
+                        <div class="search_item">
+                            <div>check out</div>
+                            <input type="date" name="outdate" class="check_out search_input" placeholder="YYYY-MM-DD">
+                        </div>
+                        <!-- <div class="search_item">
+                            <div>Person</div>
+                            <select name="person" id="adults_3" class="dropdown_item_select search_input">
+                                <% for($i=1; $i <=10; $i++) { %>
+                                    <option>
+                                        <%= $i %>
+                                    </option>
+                                    <% } %>
+                            </select>
+                        </div> -->
+                        <input type="submit" value="Search" class="button search_button">
+                    </form>
+                </div>
+
+                <!-- Search Panel FLIGHT -->
+                <div class="search_panel">
+                    <form action="findflight" method="post" id="search_form_4"
+                        class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+                        <div class="search_item">
+                            <div>From</div>
+                            <input type="text" name="from" class="destination search_input" required="required">
+                        </div>
+                        <div class="search_item">
+                            <div>To</div>
+                            <input type="text" name="to"   class="destination search_input" required="required">
+                        </div>
+                        <div class="search_item">
+                            <div>check in</div>
+                            <input type="date" name="date" class="check_in search_input" placeholder="YYYY-MM-DD">
+                        </div>
+                        <!-- <div class="search_item">
+                            <div>Person</div>
+                            <select name="person" id="adults_2" class="dropdown_item_select search_input">
+                                <% for($i=1; $i <=10; $i++) { %>
+                                    <option>
+                                        <%= $i %>
+                                    </option>
+                                    <% } %>
+                            </select>
+                        </div> -->
+                        <input type="submit" value="Search" class="button search_button">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

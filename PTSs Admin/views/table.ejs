@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="au theme template">
+    <meta name="author" content="Hau Nguyen">
+    <meta name="keywords" content="au theme template">
+
+    <!-- Title Page-->
+    <title>Tables</title>
+
+    <!-- Fontfaces CSS-->
+    <link href="css/font-face.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="css/theme.css" rel="stylesheet" media="all">
+    <style>
+        .conductor-heading h3{
+            display: inline;
+        }
+        .heading-with-butto {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body class="animsition">
+    <%- include('header.ejs'); %>
+            <!-- MAIN CONTENT-->
+            <div class="main-content">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <!-- USER DATA-->
+                                <div class="user-data m-b-30">
+                                    <div class="conductor-heading">
+                                        <h3 class="title-3 m-b-30 heading-with-button">
+                                            <i class="zmdi zmdi-account-calendar"></i>User data
+                                        </h3> 
+                                        <a href="addBusesr" class="au-btn au-btn-icon au-btn--green au-btn--small text-right heading-with-button">
+                                            <i class="zmdi zmdi-plus"></i>add
+                                        </a>
+                                    </div>
+                                    <div class="table-responsive table-data">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>City</td>
+                                                    <td>Mobile</td>
+                                                    <td>Gender</td> 
+                                                    <td>D O B</td>
+                                                    <td>Password</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <% data.user.forEach(u => { %>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="table-data__info">
+                                                                <h6><%= u.Name %></h6>
+                                                                <span>
+                                                                    <a href="#"><%= u.Email %></a>
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td><%= u.City %></td>
+                                                        <td><%= u.Mobile %></td>
+                                                        <td><%= u.Gender %></td>
+                                                        <td><% const myDate = new Date(u.DOB); const year = myDate.getFullYear(); %> <%= year %></td>
+                                                        <td><%= u.Password %></td>
+                                                    </tr>
+                                                <% }) %>
+                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- END USER DATA-->
+                            </div>
+                            <div class="col-lg-6">
+                                <!-- Conductor DATA-->
+                                <div class="user-data m-b-30">
+                                        <div class="conductor-heading">
+                                            <h3 class="title-3 m-b-30 heading-with-button">
+                                                <i class="zmdi zmdi-account-calendar"></i>Conductor data
+                                            </h3> 
+                                            <a href="addNewConductor" class="au-btn au-btn-icon au-btn--green au-btn--small text-right heading-with-button">
+                                                <i class="zmdi zmdi-plus"></i>add
+                                            </a>
+                                        </div>
+                                    <div class="table-responsive table-data">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td> 
+                                                    <td>Mobile</td>
+                                                    <td>UserName</td>
+                                                    <td>Password</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <% data.conductor.forEach(c => { %>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="table-data__info">
+                                                                <h6><%= c.FirstName %> <%= c.LastName %></h6>
+                                                                <span>
+                                                                    <a href="#"><%= c.Email %></a>
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td><%= c.Phone %></td>
+                                                        <td><%= c.Username %></td>
+                                                        <td><%= c.Password %></td>
+                                                    </tr>
+                                                <% }) %>
+                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- END Conductor DATA-->
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <!-- Bus DATA-->
+                                <div class="user-data m-b-30">
+                                    <div class="conductor-heading">
+                                        <h3 class="title-3 m-b-30 heading-with-button">
+                                            <i class="zmdi zmdi-bus"></i>Buses data
+                                        </h3> 
+                                        <a href="addBuses" class="au-btn au-btn-icon au-btn--green au-btn--small text-right heading-with-button">
+                                            <i class="zmdi zmdi-plus"></i>add
+                                        </a>
+                                    </div>
+                                    <div class="table-responsive table-data">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Number</td>
+                                                    <td>Type</td>
+                                                    <td>Capacity</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <% data.bus.forEach(b => { %>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="table-data__info">
+                                                                <h6><%= b.BusName %></h6>
+                                                                <span>
+                                                                    <a href="#"></a>
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td><%= b.BusNumber %></td>
+                                                        <td><%= b.BusType %></td>
+                                                        <td><%= b.Capacity %></td>
+                                                    </tr>
+                                                <% }) %>
+                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- END Bus DATA-->
+                            </div>
+                            <div class="col-lg-6">
+                                <!-- Admin DATA-->
+                                <div class="user-data m-b-30">
+                                    <div class="conductor-heading">
+                                        <h3 class="title-3 m-b-30 heading-with-button">
+                                            <i class="zmdi zmdi-account-calendar"></i>Admin data
+                                        </h3> 
+                                        <a href="addAdmin" class="au-btn au-btn-icon au-btn--green au-btn--small text-right heading-with-button">
+                                            <i class="zmdi zmdi-plus"></i>add
+                                        </a>
+                                    </div>
+                                    <div class="table-responsive table-data">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <td>UserName</td> 
+                                                    <td>Email</td>
+                                                    <td>Mobile</td>
+                                                    <td>Password</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="table-data__info">
+                                                                <h6><%= data.admin.UserName %></h6>
+                                                                <span>
+                                                                    <a href="#"><%= data.admin.Email %></a>
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td><%= data.admin.Email %></td>
+                                                        <td><%= data.admin.Mobile %></td>
+                                                        <td><%= data.admin.Password %></td>
+                                                    </tr>
+                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- END Admin DATA-->
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <h2 class="title-1 m-b-25"> Booking Details </h2>
+                                <div class="table-responsive table--no-card m-b-40">
+                                    <table class="table table-borderless table-striped table-earning">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-center">View <br>Detail</th>
+                                                <th class="text-center">Date</th>
+                                                <th class="text-center">Passenger</th>
+                                                <th class="text-center">From</th>
+                                                <th class="text-center">To</th>
+                                                <th class="text-center">Pickup</th>
+                                                <th class="text-center">Price</th>
+                                                <th class="text-center">Seat<br> no</th>
+                                                <th class="text-center">Total <br>Amount</th>
+                                                <th class="text-center">Amount</th>
+                                                <th class="text-center">BusName</th>
+                                                <th class="text-center">BusNumber</th>
+                                                <th class="text-center">Type</th>
+                                                <th class="text-center">Booking Id</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <% data.book.forEach(b => {
+                                                $n = 0; 
+                                                b.seatNo.forEach(no => { 
+                                                    $n++;
+                                                }); %>
+                                                <tr>
+                                                    <th><a href="BookingDetails?id=<%= b._id %>" class="text-success text-center" style="display: flex; width: 100%; align-items: center; justify-content: center;"><span style="font-size: 30px; font-weight: bold;"><i class="zmdi zmdi-eye"></i></span></a></th>
+                                                    <td class="text-center"><%= b.timeId.on.toDateString(); %></td>
+                                                    <td class="text-center"><%= b.userId.Name; %></td>
+                                                    <td class="text-center"><%= b.timeId.from; %></td>
+                                                    <td class="text-center"><%= b.timeId.to; %></td>
+                                                    <td class="text-center"><%= b.timeId.pickup; %></td>
+                                                    <td class="text-center"><%= b.timeId.Price; %></td>
+                                                    <td class="text-center"> <%= b.seatNo %></td>
+                                                    <td class="text-center"><%= $n %></td>
+                                                    <td class="text-center"><%= b.timeId.Price * $n;%></td>
+                                                    <td class="text-center"><%= b.busId.BusName; %></td>
+                                                    <td class="text-center"><%= b.busId.BusNumber; %></td>
+                                                    <td class="text-center"><%= b.busId.BusType; %></td>
+                                                    <td class="text-center"><%= b._id; %></td>
+                                                </tr>
+                                                
+                                            <% }) %>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="copyright">
+                                    <p>Copyright © 2018 Colorlib. All rights reserved. Template by <a href="https://colorlib.com">Colorlib</a>.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="vendor/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap JS-->
+    <script src="vendor/bootstrap-4.1/popper.min.js"></script>
+    <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <!-- Vendor JS       -->
+    <script src="vendor/slick/slick.min.js">
+    </script>
+    <script src="vendor/wow/wow.min.js"></script>
+    <script src="vendor/animsition/animsition.min.js"></script>
+    <script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+    </script>
+    <script src="vendor/counter-up/jquery.waypoints.min.js"></script>
+    <script src="vendor/counter-up/jquery.counterup.min.js">
+    </script>
+    <script src="vendor/circle-progress/circle-progress.min.js"></script>
+    <script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="vendor/chartjs/Chart.bundle.min.js"></script>
+    <script src="vendor/select2/select2.min.js">
+    </script>
+
+    <!-- Main JS-->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
+<!-- end document-->

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Razorpay Payment</title>
+</head>
+
+<body>
+    <!-- <input type="text" name="busId" value="<%= busId %>" id="">
+    <input type="text" name="timeId" value="<%= timeId %>" id="">
+    <input type="text" name="seet" value="<%= newSeatNumbers %>" id=""> -->
+    <!-- Include the Razorpay script -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script>
+        var options = {
+            key: 'rzp_test_cX0VB9927mioP6',
+            amount: <%= order.amount %>,
+            currency: 'INR',
+            name: 'PTS\'s',
+            description: 'Bus Seat Booking',
+            order_id: '<%= order.id %>',
+            handler: function (response) {
+                window.location.href = "/success?busId=<%= busId %>&timeId=<%= timeId %>&seet=<%= newSeatNumbers %>";
+            },
+            prefill: {
+                name: '<%= order.notes.name %>',
+                email: '<%= order.notes.email %>',
+                contact: '<%= order.notes.contact %>',
+            },
+        };
+
+        var razorpayInstance = new Razorpay(options);
+        razorpayInstance.open();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+const mongoose = require('mongoose');
+
+const loginSchema = new mongoose.Schema({
+    Email: String,
+    Passowrd: String
+});
+
+const loginModal = mongoose.model('UserMaster', loginSchema);
+
+module.exports = loginModal;

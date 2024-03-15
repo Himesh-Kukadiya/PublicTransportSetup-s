@@ -1,0 +1,272 @@
+<!-- --------------------------
+        User Login modal
+--------------------------- -->
+<div class="modal fade" id="userloginModal" tabindex="-1" role="dialog" aria-labelledby="userloginModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form action="/userlogin" method="post" class="form-group">
+                <div class="modal-header text-light bg-dark">
+                    <h5 class="modal-title" id="userloginModalLabel">U S E R &ensp;&ensp;&ensp;L O G I N</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="text-light">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col pt-2">
+                                <input type="email" name="email" id="ticket-form-email" pattern="[^@]*@[^@]*" class="form-control" placeholder="Enter Your Email" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col pt-4">
+                                <input type="password" name="pass" class="form-control" placeholder="Enter Your Password" id="ticket-form-password" autofocus title="Minimum 8 characters, 1 Upper, 1 Lower, 1 Special and 1 number" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-check pt-4 pl-4">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <label class="form-check-label" for="defaultCheck1">I Remember terms & condition</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pt-3">
+                                I not have account. I want to <a href="" class="text-primary" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#registerModal"> Create New Account </a>.
+                                I not rember Password. So, <a href="" class="text-primary" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#forgetpasswordModal1"> Forget Password</a>.
+                                Sorry i am <a href="" class="text-primary" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#conductorloginModal">Conductor</a> or <a href="" class="text-primary" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#adminloginModal">Admin</a>.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" class="btn btn-primary form-control text-light" value="L O G I N">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- --------------------------
+        Conductor Login modal
+--------------------------- -->
+<div class="modal fade" id="conductorloginModal" tabindex="-1" role="dialog" aria-labelledby="conductorloginModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form action="/conductorlogin" method="post" class="form-group">
+                <div class="modal-header text-light bg-dark">
+                    <h5 class="modal-title" id="conductorloginModalLabel">C O N D U C T O R &ensp;&ensp;&ensp;L O G I N</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="text-light">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col pt-2">
+                                <input type="email" name="email" id="ticket-form-email" pattern="[^@]*@[^@]*" class="form-control" placeholder="Enter Your Email" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col pt-4">
+                                <input type="password" name="pass" class="form-control" placeholder="Enter Your Password" id="ticket-form-password" autofocus title="Minimum 8 characters, 1 Upper, 1 Lower, 1 Special and 1 number" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-check pt-4 pl-4">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <label class="form-check-label" for="defaultCheck1">I Remember terms & condition</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pt-3">
+                                I not have account. I want to <a href="" class="text-primary" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#registerModal"> Create New Account </a>.
+                                I not rember Password. So, <a href="" class="text-primary" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#forgetpasswordModal1"> Forget Password</a>.
+                                Sorry i am <a href="" class="text-primary" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#userloginModal">User</a> or <a href="" class="text-primary" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#adminloginModal">Admin</a>.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" class="btn btn-primary form-control text-light" value="L O G I N">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- --------------------------
+        Admin Login modal
+--------------------------- -->
+<div class="modal fade" id="adminloginModal" tabindex="-1" role="dialog" aria-labelledby="adminloginModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form action="/adminlogin" method="post" class="form-group">
+                <div class="modal-header text-light bg-dark">
+                    <h5 class="modal-title" id="adminloginModalLabel">A D M I N &ensp;&ensp;&ensp;L O G I N</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="text-light">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col pt-2">
+                                <input type="email" name="email" id="ticket-form-email" pattern="[^@]*@[^@]*" class="form-control" placeholder="Enter Your Email" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col pt-4">
+                                <input type="password" name="pass" class="form-control" placeholder="Enter Your Password" id="ticket-form-password" autofocus title="Minimum 8 characters, 1 Upper, 1 Lower, 1 Special and 1 number" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-check pt-4 pl-4">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <label class="form-check-label" for="defaultCheck1">I Remember terms & condition</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pt-3">
+                                I not have account. I want to <a href="" class="text-primary" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#registerModal"> Create New Account </a>.
+                                I not rember Password. So, <a href="" class="text-primary" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#forgetpasswordModal1"> Forget Password</a>.
+                                Sorry i am <a href="" class="text-primary" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#userloginModal">User</a> or <a href="" class="text-primary" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#conductorloginModal">Conductor</a>.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" class="btn btn-primary form-control text-light"  value="L O G I N">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<!-- --------------------------
+        Registration modal
+--------------------------- -->
+<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form action="/register" method="post" class="form-group">
+                <div class="modal-header text-light bg-dark">
+                    <h5 class="modal-title" id="registerModalLabel">R E G I S T E R &ensp;&ensp;&ensp; N O W</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="text-light">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- userName -->
+                    <div class="row">    
+                        <div class="col pt-2">
+                            <input id="userName" type="text" name="userName" class="form-control" placeholder="Enter Full Name" required>
+                            <div class="invalid-feedback">Please provide your first name.</div>
+                        </div>
+                    </div>
+                    <!-- city -->
+                    <div class="row">
+                        <div class="col pt-2">
+                            <input id="city" type="text" name="city" class="form-control" placeholder="City" required>
+                            <div class="invalid-feedback">Please provide your City.</div>
+                        </div>
+                    </div>
+                    <!-- gender -->
+                    <div class="row">
+                        <div class="col-md-3 pt-2" style="font-size: 15px; font-weight: bold;">Gender:</div>
+                        <div class="col-md-3 pt-2">
+                            <input id="male" type="radio" name="gender" value="Male" class="form-radio-input">
+                            <label for="male" style="font-size: 15px;" class="form-radio-label">&ensp;&ensp;Male</label>
+                            <div class="invalid-feedback">Please provide your Gender.</div>
+                        </div>
+                        <div class="col-md-3 pt-2">
+                            <input id="female" type="radio" name="gender" value="Female" class="form-radio-input">
+                            <label for="female" style="font-size: 15px;" class="form-radio-label">&ensp;&ensp;Female</label>
+                        </div>
+                    </div>
+                    <!-- dob  -->
+                    <div class="row">
+                        <div class="col-4 pt-3">
+                            <span style="font-size: 15px; font-weight: bold;">Date of Birth</span>
+                        </div>
+                        <div class="col-8 pt-2">
+                            <input id="dob" type="date" name="dob" class="form-control" required>
+                            <div class="invalid-feedback">Please provide your date of birth.</div>
+                        </div>
+                    </div>
+                    <!-- number -->
+                    <div class="row">
+                        <div class="col pt-2">
+                            <input id="mobile" type="text" name="number" class="form-control" placeholder="Mobile Number" required>
+                            <div class="invalid-feedback">Please provide your Mobile Number.</div>
+                        </div>
+                    </div>
+                    <!-- email -->
+                    <div class="row">
+                        <div class="col pt-2">
+                            <input type="email" name="email" id="ticket-form-email" pattern="[^@]*@[^@]*" class="form-control" placeholder="Enter Your Email" required>
+                        </div>
+                    </div>
+                    <!-- pass -->
+                    <div class="row">
+                        <div class="col pt-2">
+                            <input type="password" name="pass" class="form-control" placeholder="Enter Your Password" id="ticket-form-password" autofocus title="Minimum 8 characters, 1 Upper, 1 Lower, 1 Special and 1 number" required>
+                            <div class="invalid-feedback">Please provide a password.</div>
+                        </div>
+                    </div>
+                    <!-- conpass  -->
+                    <div class="row">
+                        <div class="col pt-2">
+                            <input type="password" name="conpass" class="form-control" placeholder="Confirm Password" id="ticket-form-password" autofocus title="Minimum 8 characters, 1 Upper, 1 Lower, 1 number" required>
+                            <div class="invalid-feedback">Passwords do not match.</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- btn submit  -->
+                <div class="modal-footer">
+                    <input type="submit" class="btn btn-primary form-control text-light" value="R E G I S T E R">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<!-- --------------------------
+        Forger Password modal
+--------------------------- -->
+<div class="modal fade" id="forgetpasswordModal1" tabindex="-1" role="dialog" aria-labelledby="forgetpasswordModal1Label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form action="/forgerPass" method="post" class="form-group">
+                <div class="modal-header text-light bg-dark">
+                    <h5 class="modal-title" id="forgetpasswordModal1Label"> F O R G E T &ensp;&ensp;&ensp;P A S S W O R D</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" >
+                        <span aria-hidden="true" class="text-light">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col pt-2">
+                                <input type="email" name="email" id="ticket-form-email" pattern="[^@]*@[^@]*" class="form-control" placeholder="Enter Your Email" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pt-3">
+                                I dont want to forget my password. So, want to go <a href="" class="text-primary" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#userloginModal"> Back </a>.
+                            </div>
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" class="btn btn-primary form-control text-light" name="login" value="N E X T">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

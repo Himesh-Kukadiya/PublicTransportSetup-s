@@ -69,7 +69,7 @@ const user = mongoose.model('usermasters', {
     Mobile : String,
     Email : String,
     Password : String,
-    ProfileImage : String
+    ProfileImage : String 
 }, 'usermasters');
 const conductor = mongoose.model('Conductor', {
     FirstName : String,
@@ -120,7 +120,7 @@ app.get('/', (req, res) => {
 
 
 
-//Login
+//Login ...
 app.post('/adminlogin', async (req, res) => {
     const { email, pass } = req.body;
     try {

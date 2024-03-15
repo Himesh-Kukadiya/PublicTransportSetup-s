@@ -120,7 +120,7 @@ app.get('/', (req, res) => {
 
 
 
-//Login ...
+//Login Request
 app.post('/adminlogin', async (req, res) => {
     const { email, pass } = req.body;
     try {
